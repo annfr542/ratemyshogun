@@ -19,7 +19,7 @@
 
 
     <script type="text/view" id="home_view">
-      <header class="home">
+      <div class="home">
         <div class="title">
           <span class="titletext fade-in" id="rate">Rate</span>
             <span class="titletext fade-in" id="my">my</span>
@@ -27,7 +27,7 @@
             <span class="titletext fade-in" id="punkt">.</span>
             <span class="titletext fade-in" id="net">net</span>
         </div>
-      </header>
+      </div>
     </script>
 
     <script type="text/view" id="toplist_view">
@@ -110,6 +110,37 @@
 
       </header>
     </script>
+
+    <script type="text/view" id="quiz_view">
+      <div id="quiz_header">
+        <h1>Vilken karaktär är du mest lik? </h1>
+        <h2>Gör quizet och ta reda på det! </h2>
+        <br><br>
+        <h3>Vad gör du om det är låst när du kommer till Forum och du saknar nykel?<h3>
+      </div> 
+      <br><br><br>
+      <div class="quiz_object"onclick="loadQuizResult('bukko')">Bussar mongolerna på KKs nykelansvariga så att de öppnar</div>
+      <div class="quiz_object"onclick="loadQuizResult('mentorn')">Frågar andarna hur du ska lösa problemet</div>
+      <div class="quiz_object"onclick="loadQuizResult('tomoe')">Tar fram sensei Miyagis regelbok och letar efter tips</div>
+      <div class="quiz_object"onclick="loadQuizResult('lapsang')">Kokar en kopp te och väntar</div>
+      <div class="quiz_object"onclick="loadQuizResult('hojo')">Vet inte</div>
+      <div class="quiz_object"onclick="loadQuizResult('marco')">Säljer en låst dörr. Skicka PM</div>
+      <div class="quiz_object"onclick="loadQuizResult('kejsaren')">Eldar upp den</div>
+      <div class="quiz_object"onclick="loadQuizResult('directionen')">Skjuter på problemet, det löser sig säkert ändå</div>
+      <br><br>
+    </script>
+    
+    
+    <script type="text/view" id="result_quiz_view">
+      <div id="quiz_header">
+        <h2>Du är mest lik</h2>
+        <h1 id="quiz_result">Anna</h1>
+        <br>
+        <div id="quiz_result_img"></div>
+        <h3 id="quiz_result_text">Du är smart som en pannkaka<h3>
+      </div> 
+    </script>
+    
     <div id="current_view">
 
     </div>
