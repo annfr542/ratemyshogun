@@ -69,7 +69,7 @@ function loadQuizResult(result){
       break;
     case "directionen":
       document.getElementById("quiz_result").innerHTML = "Directionen";
-      document.getElementById("quiz_result_text").innerHTML = "Du är en tönt";
+      document.getElementById("quiz_result_text").innerHTML = "Sök nästa års direction <a href='https://wiki.studentspex.se/nominera/'>här</a>";
       document.getElementById("quiz_result_img").innerHTML = "<img src='directionen.png' class='contester' style='width:35vw'></img>";
       break;
     
