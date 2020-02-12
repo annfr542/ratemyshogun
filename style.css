@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: Century Gothic;
-  color: white;
 }
 
 body {
@@ -206,12 +205,42 @@ div.comment_text {
   width: 50%;
   margin: auto;
   cursor: pointer;
+  color: white;
 }
 .quiz_object:hover{
   background-color: rgb(212,70,4);
 }
-
-
+.add_comment{
+  margin-top: 3vw;
+  width: 60%;
+  margin: 1vw auto;
+  font-size: 3vw;
+}
+#input_text{
+  width: 80%;
+  height: 50px;
+  
+}
+.input_text_size{
+  font-size: 20px;
+}
+#knapp{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+select{
+  padding: 15px 9px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  background-color: #bdbdff8a;
+}
 
 
 /*Fading stuff*/
@@ -292,6 +321,9 @@ div.comment_text {
   div.comments {
     width: 80%;
     font-size: 3vw;
+  }
+  .add_comment{
+    width: 80%;
   }
   
   .comment_author{

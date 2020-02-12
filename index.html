@@ -98,8 +98,10 @@
         </div>
 
         <div class="add_comment">
-        <form onsubmit="post_comment(this); return false;">
-          <select name="character">
+
+          Skriv en kommentar
+        <form class="comment_form" onsubmit="post_comment(this); return false;">
+          <select class="input_text_size"  name="character">
             <option value="Hojo">Hojo</option>
             <option value="Kejsaren">Kejsaren</option>
             <option value="MarcoPolo">MarcoP</option>
@@ -108,8 +110,8 @@
             <option value="Bukko">Bukko</option>
             <option value="Mentorn">Mentorn</option>
           </select>
-          <input type="text" name="comment" id="comment" required><br>
-          <input type="submit" value="Post Comment" id="post" required><br>
+          <input  class="input_text_size" id="input_text" type="text" name="comment" id="comment" required><br>
+          <input id="knapp" class="input_text_size" type="submit" value="Skicka" id="post" required><br>
         </div>
 
       </div>
