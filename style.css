@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+}
+
+body {
+  background-color: rgb(20,20,20);
+}
+
+header.home {
+  /*ackground-color: rgb(5,5,5);*/
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(affisch.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+header.topList {
+  background-color: rgb(20,20,20);
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(225,225,225);
+}
+
+.title {
+    margin: auto;
+    width: fit-content;
+}
+
+
+.titletext{
+  float:left;
+  font-size: 80px;
+  color: white;
+  margin-top: 20vw;
+}
+
+div.logo img{
+  float:left;
+  height: 100px;
+  width: auto;
+}
+
+div.menu-bar {
+  text-align: center;
+  margin-top: auto;
+  padding: 30px;
+
+}
+
+div.menu-bar ul {
+  float: right;
+  list-style-type: none;
+}
+
+div.menu-bar ul li {
+  display: inline-block;
+}
+
+div.menu-bar ul li button {
+  background-color: ;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+div.menu-bar a {
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+div.menu-bar button.active {
+  background-color: rgb(212,70,4);
+}
+div.menu-bar button:hover {
+  background-color: rgb(212,70,4);
+}
+div.menu-bar a.active {
+  background-color: rgb(212,70,4);
+}
+div.menu-bar a:hover {
+  background-color: rgb(212,70,4);
+}
+
+@keyframes titlefade {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+div.shogun-rating {
+
+  padding-top: 100px;
+  text-align: center;
+  color: rgb(200,200,200);
+}
+div.shogun-rating img.contester{
+  height: 200px;
+  width: auto;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 100%;
+  border-color: black;
+  margin-top: 10px;
+}
+
+div.comments {
+  display: inline-block;
+  width: 350px;
+  margin-top: 30px;
+}
+
+div.shogun-rating h3 {
+  text-align: center;
+}
+div.comment {
+  display: inline-block;
+  text-align: center;
+  width: 350px;
+  margin-top: 10px;
+  background-color: rgb(15,15,15);
+}
+
+div.comment_image {
+
+  width: 60px;
+  height: 60px;
+
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+}
+div.comment img{
+  height: 100%;
+  width: 100%;
+}
+
+div.comment_text {
+}
+
+
+
+/*Fading stuff*/
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  opacity: 1 \9; /*just in case ie*/
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:2s;
+  -moz-animation-duration:2s;
+  animation-duration:2s;
+}
+
+#rate {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+#my {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+#shogun {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+#punkt {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#net {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
