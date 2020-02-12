@@ -13,9 +13,10 @@
     <div class="menu-bar">
       <a href="javascript:void(0);" onclick="loadView(1)" id="home-button">Home</a>
       <a href="javascript:void(0);" onclick="loadView(2)" id="toplist-button">Top List</a>
-      <a href="javascript:void(0);" onclick="loadView(3)" id="faq-button">FAQ</a>
+      <a href="javascript:void(0);" onclick="loadView(3)" id="quiz-button">Quiz</a>
+      <a href="javascript:void(0);" onclick="loadView(4)" id="faq-button">FAQ</a>
     </div>
-    
+
 
     <script type="text/view" id="home_view">
       <header class="home">
@@ -38,7 +39,7 @@
         <img src="hojo.png" class="contester">
         <p><h3>9.2 / 10 </h3>(>9000 reviews)</p><br>
         </div>
-        <div class="comments">
+        <div id="comments" class="comments">
         Latest reviews
           <div class="comment">
             <div class="comment_image">
@@ -89,6 +90,22 @@
             </div>
           </div>
         </div>
+
+        <div class="add_comment">
+        <form onsubmit="post_comment(this); return false;">
+          <select name="character">
+            <option value="Hojo">Hojo</option>
+            <option value="Kejsaren">Kejsaren</option>
+            <option value="MarcoPolo">MarcoP</option>
+            <option value="Lapsang">Lapsang</option>
+            <option value="Tomoe">Tomoe</option>
+            <option value="Bukko">Bukko</option>
+            <option value="Mentorn">Mentorn</option>
+          </select>
+          <input type="text" name="comment" id="comment" required><br>
+          <input type="submit" value="Post Comment" id="post" required><br>
+        </div>
+
       </div>
 
       </header>
