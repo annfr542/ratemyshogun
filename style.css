@@ -214,15 +214,15 @@ div.comment_text {
   margin-top: 3vw;
   width: 60%;
   margin: 1vw auto;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 #input_text{
-  width: 70%;
-  height: 60px;
+  width: 80%;
+  height: 50px;
   
 }
 .input_text_size{
-  font-size: 25px;
+  font-size: 20px;
 }
 #knapp{
   background-color: #4CAF50; /* Green */
@@ -232,7 +232,7 @@ div.comment_text {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 4vw;
+  font-size: 16px;
 }
 select{
   padding: 15px 9px;
@@ -323,7 +323,7 @@ select{
     font-size: 3vw;
   }
   .add_comment{
-    width: 80%;
+    width: 70%;
   }
   
   .comment_author{
@@ -338,8 +338,19 @@ select{
   }
   
   div.comment_text {
-    padding-left: 13vw;
-    font-size: 3vw;
+    font-size: 4vw;
+  }
+
+  
+  #input_text{
+    width: 70%;
+    height: 60px;
+    
+  }
+  
+  #knapp{
+   
+    font-size: 30px;
   }
   
 }
