@@ -18,3 +18,6 @@ class Comment(models.Model):
     text = models.CharField(max_length=500, blank=False)
 
     pub_date = models.DateTimeField('date published', default=timezone.now)
+
+    def __str__(self):
+        return "%s: %s" % (self.get_character_display(), self.text)
