@@ -89,12 +89,8 @@ function post_comment(form){
   text = form.comment.value;
   img = character + ".png";
 
-  html = "<div class=\"comment\">" +
-  "<div class=\"comment_image\">" +
-  "<img src=" + img + " class=\"commenter\">" +
-  "</div>" + "<div class=\"comment_text\">" +
-  "<p><b>" + String(character) + "</b><br>" +
-  "<em>" + String(text) + "</em></p>" + "</div>" + "</div>";
+  html = '<div class="comment"><div class="comment_image"><img src=' + img + ' class="commenter"></div><div class="comment_author">'+character +'</div><div class="comment_text">'+text+'</div></div>'
 
   document.getElementById("comments").innerHTML += html;
 }
+
