@@ -210,6 +210,10 @@ div.comment_text {
 .quiz_object:hover{
   background-color: rgb(212,70,4);
 }
+#quiz_result_text{
+  width: 70%;
+  margin: auto;
+}
 .add_comment{
   margin-top: 3vw;
   width: 60%;
