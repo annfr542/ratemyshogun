@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  {% load static %}
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="client.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="{% static 'page/style.css' %}" type="text/css">
+    <script src="{% static 'page/client.js' %}" type="text/javascript"></script>
     <title>RateMyShogun</title>
 
   </head>
@@ -36,14 +37,14 @@
       <div class="shogun-rating">
       <div class="person">
         <h2>Hōjō Tokimune (北条 時宗)</h2>
-        <img src="Hojo.png" class="contester">
+        <img src="{% static 'page/Hojo.png' %}" class="contester">
         <p><h3>9.2 / 10 </h3>(>9000 reviews)</p><br>
         </div>
         <div id="comments" class="comments">
         Latest reviews
           <div class="comment">
             <div class="comment_image">
-              <img src="Bukko.png" class="commenter">
+              <img src="{% static 'page/Bukko.png' %}" class="commenter">
             </div>
             <div class="comment_author">Bukko </div>
             <div class="comment_text">Sämst... Så riggat.
@@ -52,7 +53,7 @@
 
           <div class="comment">
             <div class="comment_image">
-              <img src="Kejsaren.png" class="commenter">
+              <img src="{% static 'page/Kejsaren.png' %}" class="commenter">
             </div>
             <div class="comment_author">Kejsaren </div>
             <div class="comment_text">Åh kuuuuul!
@@ -61,7 +62,7 @@
 
           <div class="comment">
             <div class="comment_image">
-              <img src="Mentorn.png" class="commenter">
+              <img src="{% static 'page/Mentorn.png' %}" class="commenter">
             </div>
             <div class="comment_author">Mentorn </div>
             <div class="comment_text">Du är så himla duktig #eggplant
@@ -70,7 +71,7 @@
 
           <div class="comment">
             <div class="comment_image">
-              <img src="Lapsang.png" class="commenter">
+              <img src="{% static 'page/Lapsang.png' %}" class="commenter">
             </div>
             <div class="comment_author">Lapsang</div>
             <div class="comment_text">T.
@@ -79,7 +80,7 @@
 
           <div class="comment">
             <div class="comment_image">
-              <img src="Tomoe.png" class="commenter">
+              <img src="{% static 'page/Tomoe.png' %}" class="commenter">
             </div>
             <div class="comment_author">Tomoe</div>
             <div class="comment_text">Jag hackar er.
@@ -88,7 +89,7 @@
 
           <div class="comment">
             <div class="comment_image">
-              <img src="MarcoPolo.png" class="commenter">
+              <img src="{% static 'page/MarcoPolo.png' %}" class="commenter">
             </div>
             <div class="comment_author">Marco P</div>
             <div class="comment_text">Säljer en soffa. PM.
