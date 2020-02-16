@@ -4,7 +4,7 @@ function loadView(view=1){
   document.getElementById("home-button").classList.remove('active');
   document.getElementById("toplist-button").classList.remove('active');
   document.getElementById("quiz-button").classList.remove('active');
-  document.getElementById("faq-button").classList.remove('active');
+  //document.getElementById("faq-button").classList.remove('active');
 
   if (view == 1){
     document.getElementById("current_view").innerHTML = document.getElementById("home_view").innerHTML;
