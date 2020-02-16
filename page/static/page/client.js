@@ -65,7 +65,7 @@ function loadQuizResult(result){
     case "marco":
       document.getElementById("quiz_result").innerHTML = "Marco Polo";
       document.getElementById("quiz_result_text").innerHTML = "Du är en fantastisk försäljare som vet att alla problem kan lösas med hjälp av pengar. Du har övertygat alla dina vänner om att kolla på spexet och du tycker att PR nog snart borde upprätta en staty i din ära som tack.";
-      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/MarcoPolo.png' class='contester' style='width:35vw'></img>";
+      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/Marco Polo.png' class='contester' style='width:35vw'></img>";
       break;
     case "directionen":
       document.getElementById("quiz_result").innerHTML = "Directionen";

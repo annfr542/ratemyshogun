@@ -1,11 +1,12 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
 class Comment(models.Model):
     CHARACTER_CHOICES = (
         ('BU', 'Bukko'),
-        ('HO', 'Hojo')
+        ('HO', 'Hojo'),
         ('KE', 'Kejsaren'),
         ('LA', 'Lapsang'),
         ('ME', 'Mentorn'),
@@ -13,7 +14,7 @@ class Comment(models.Model):
         ('TO', 'Tomoe'),
     )
 
-    character = models.CharField(max_length=2, choices=CHARACETER_CHOICES, null=False)
+    character = models.CharField(max_length=15, choices=CHARACTER_CHOICES, null=False)
     text = models.CharField(max_length=500, blank=False)
 
-    pub_date = models.DataTimeField('date published')
+    pub_date = models.DateTimeField('date published', default=timezone.now)
