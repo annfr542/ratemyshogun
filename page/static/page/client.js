@@ -70,7 +70,7 @@ function loadQuizResult(result){
     case "directionen":
       document.getElementById("quiz_result").innerHTML = "Directionen";
       document.getElementById("quiz_result_text").innerHTML = "Du är en småknasig typ som litar på dina medspexare och vet att alla problem löser sig. <br> Nu är du redo att ta klivet, sök direction21 <a href='https://wiki.studentspex.se/nominera/'>här</a>";
-      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/directionen.png' class='contester' style='width:35vw'></img>";
+      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/directionen1.png' class='contester' style='width:35vw'></img>";
       break;
     
     default:
