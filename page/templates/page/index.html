@@ -60,9 +60,17 @@
         <div class="add_comment">
 
           Skriv en kommentar
-        <form class="comment_form" action="/" method="post">
-          {% csrf_token %}
-          {{ comment_form.as_p }}
+        <form class="comment_form" onsubmit="post_comment(this); return false;">
+          <select class="input_text_size"  name="character">
+            <option value="HO">Hojo</option>
+            <option value="KE">Kejsaren</option>
+            <option value="MP">MarcoP</option>
+            <option value="LA">Lapsang</option>
+            <option value="TO">Tomoe</option>
+            <option value="BU">Bukko</option>
+            <option value="ME">Mentorn</option>
+          </select>
+          <input  class="input_text_size" id="input_text" type="text" name="text" id="comment" required><br><br>
           <input id="knapp" class="input_text_size" type="submit" value="Skicka" id="post" required><br>
         </div>
 
@@ -96,18 +104,18 @@
       <div class="shogun-rating">
         <div class="person">
           <h2>Skicka kärlek till uppsättningen</h2>
-          <img src="{% static 'page/uppsattningen.png' %}" style="width:70%">
+          <img src="{% static 'page/Uppsättningen.png' %}" style="width:70%">
         </div>
         <div id="comments" class="comments">
-          {% for comment in comments %}
+          {% for love in love_list %}
           <div class="comment">
             <div class="comment_image">
-              {% with 'page/'|add:comment.get_character_display|add:'.png' as character_img %}
-              <img src="{% static character_img %}" class="commenter">
+              {% with 'page/'|add:love.get_group_display|add:'.png' as group_img %}
+              <img src="{% static group_img %}" class="commenter">
               {% endwith %}
             </div>
-            <div class="comment_author">{{ comment.get_character_display }} </div>
-            <div class="comment_text">{{ comment.text }}
+            <div class="comment_author">{{ love.get_group_display }} </div>
+            <div class="comment_text">{{ love.text }}
             </div>
           </div>
 
@@ -116,9 +124,21 @@
 
         <div class="add_comment">
           Skicka en kram till:
-        <form class="comment_form" action="/" method="post">
-          {% csrf_token %}
-          {{ comment_form.as_p }}
+        <form class="comment_form" onsubmit="post_love(this); return false;">
+          <select class="input_text_size"  name="group">
+            <option value="DET">Dekor</option>
+            <option value="DIR">Directionen</option>
+            <option value="KM">KM</option>
+            <option value="KSP">KSP</option>
+            <option value="LED">Ledningen</option>
+            <option value="MAN">Manus</option>
+            <option value="PR">PR</option>
+            <option value="ORK">Musikgruppen</option>
+            <option value="SKA">Skådis</option>
+            <option value="TEK">Tekniken</option>
+            <option value="UPP">Uppsättningen</option>
+          </select>
+          <input  class="input_text_size" id="input_text" type="text" name="text" id="comment" required><br><br>
           <input id="knapp" class="input_text_size" type="submit" value="Skicka" id="post" required><br>
         </div>
       </div>

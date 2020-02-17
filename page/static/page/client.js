@@ -83,16 +83,38 @@ function test(){
   window.alert("TEST_ALERT");
 }
 
-
-function post_comment(form){
-  character = form.character.value;
-  text = form.comment.value;
-  img = "static/page/" + character + ".png";
-
-  html = '<div class="comment"><div class="comment_image"><img src=' + img + ' class="commenter"></div><div class="comment_author">'+character +'</div><div class="comment_text">'+text+'</div></div>'
-
-  document.getElementById("comments").innerHTML += html;
-  document.getElementById("input_text").value = null;
+function update_comments() {
 
 }
 
+function update_love() {
+
+}
+
+function post_comment(form) {
+  const url = "api/comments/";
+  fetch(url, {
+    method: "POST",
+    body: new FormData(form)
+  }).then(
+    function () {
+      if (this.readyState == 4 && this.status == 200) {
+        update_comments();
+      }
+    }
+  );
+}
+
+function post_love(form) {
+  const url = "api/love/";
+  fetch(url, {
+    method: "POST",
+    body: new FormData(form)
+  }).then(
+    function () {
+      if (this.readyState == 4 && this.status == 200) {
+        update_love();
+      }
+    }
+  );
+}
