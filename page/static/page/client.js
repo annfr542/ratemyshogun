@@ -4,7 +4,7 @@ function loadView(view=1){
   document.getElementById("home-button").classList.remove('active');
   document.getElementById("toplist-button").classList.remove('active');
   document.getElementById("quiz-button").classList.remove('active');
-  //document.getElementById("faq-button").classList.remove('active');
+  document.getElementById("love-button").classList.remove('active');
 
   if (view == 1){
     document.getElementById("current_view").innerHTML = document.getElementById("home_view").innerHTML;
@@ -19,8 +19,8 @@ function loadView(view=1){
     document.getElementById("quiz-button").classList.add('active');
   }
   else if (view == 4){
-    document.getElementById("current_view").innerHTML = document.getElementById("toplist_view").innerHTML;
-    document.getElementById("faq-button").classList.add('active');
+    document.getElementById("current_view").innerHTML = document.getElementById("love_view").innerHTML;
+    document.getElementById("love-button").classList.add('active');
   }
   else {
     document.getElementById("current_view").innerHTML = document.getElementById("home_view").innerHTML;
@@ -92,5 +92,7 @@ function post_comment(form){
   html = '<div class="comment"><div class="comment_image"><img src=' + img + ' class="commenter"></div><div class="comment_author">'+character +'</div><div class="comment_text">'+text+'</div></div>'
 
   document.getElementById("comments").innerHTML += html;
+  document.getElementById("input_text").value = null;
+
 }
 

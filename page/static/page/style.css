@@ -186,7 +186,7 @@ div.comment img{
   width: 100%;
 }
 
-div.comment_text {
+.comment_text {
   width: 100%;
   float: left;
   text-align: left;
@@ -341,20 +341,27 @@ select{
     height: 10vw;
   }
   
-  div.comment_text {
+  .comment_text {
+    font-size: 4vw;
+    padding-left: 13vw;
+  }
+  .add_comment{
     font-size: 4vw;
   }
-
   
   #input_text{
     width: 70%;
     height: 60px;
-    
+    font-size: 3vw;
   }
   
   #knapp{
-   
     font-size: 30px;
+  }
+  
+  .input_text_size {
+      height: 60px;
+      font-size: 3vw;
   }
   
 }

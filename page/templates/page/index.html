@@ -15,7 +15,7 @@
       <a class="menu_element" href="javascript:void(0);" onclick="loadView(1)" id="home-button">Hem</a>
       <a class="menu_element" href="javascript:void(0);" onclick="loadView(2)" id="toplist-button">Topplista</a>
       <a class="menu_element" href="javascript:void(0);" onclick="loadView(3)" id="quiz-button">Quiz</a>
-      <!--<a class="menu_element" href="javascript:void(0);" onclick="loadView(4)" id="faq-button">FAQ</a>-->
+      <a class="menu_element" href="javascript:void(0);" onclick="loadView(4)" id="love-button">Skicka kärlek</a>
     </div>
 
 
@@ -66,6 +66,61 @@
           <input id="knapp" class="input_text_size" type="submit" value="Skicka" id="post" required><br>
         </div>
 
+      </div>
+
+      </header>
+    </script>
+
+    <script type="text/view" id="quiz_view">
+      <div id="quiz_header">
+        <h1>Vilken karaktär är du mest lik? </h1>
+        <h2>Gör quizet och ta reda på det! </h2>
+        <br><br>
+        <h3>Vad gör du om det är låst när du kommer till Forum och du saknar nykel?<h3>
+      </div> 
+      <br><br><br>
+      <div class="quiz_object"onclick="loadQuizResult('bukko')">Bussar mongolerna på KKs nykelansvariga så att de öppnar</div>
+      <div class="quiz_object"onclick="loadQuizResult('mentorn')">Frågar andarna hur du ska lösa problemet</div>
+      <div class="quiz_object"onclick="loadQuizResult('tomoe')">Tar fram sensei Miyagis regelbok och letar efter tips</div>
+      <div class="quiz_object"onclick="loadQuizResult('lapsang')">Kokar en kopp te och väntar</div>
+      <div class="quiz_object"onclick="loadQuizResult('hojo')">Vet inte</div>
+      <div class="quiz_object"onclick="loadQuizResult('marco')">Lägger ut dörren till försäljning</div>
+      <div class="quiz_object"onclick="loadQuizResult('kejsaren')">Eldar upp den</div>
+      <div class="quiz_object"onclick="loadQuizResult('directionen')">Skjuter på problemet, det löser sig säkert ändå</div>
+      <br><br>
+    </script>
+
+    <script type="text/view" id="love_view">
+      <header class="toplist">
+
+      <div class="shogun-rating">
+        <div class="person">
+          <h2>Skicka kärlek till uppsättningen</h2>
+          <img src="{% static 'page/uppsattningen.png' %}" style="width:70%">
+        </div>
+        <div id="comments" class="comments">
+          {% for comment in comments %}
+          <div class="comment">
+            <div class="comment_image">
+              {% with 'page/'|add:comment.get_character_display|add:'.png' as character_img %}
+              <img src="{% static character_img %}" class="commenter">
+              {% endwith %}
+            </div>
+            <div class="comment_author">{{ comment.get_character_display }} </div>
+            <div class="comment_text">{{ comment.text }}
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+
+        <div class="add_comment">
+          Skicka en kram till:
+        <form class="comment_form" action="/" method="post">
+          {% csrf_token %}
+          {{ comment_form.as_p }}
+          <input id="knapp" class="input_text_size" type="submit" value="Skicka" id="post" required><br>
+        </div>
       </div>
 
       </header>
