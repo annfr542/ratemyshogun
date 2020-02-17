@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='comment',
             name='character',
-            field=models.CharField(choices=[('BU', 'Bukko'), ('HO', 'Hojo'), ('KE', 'Kejsaren'), ('LA', 'Lapsang'), ('ME', 'Mentorn'), ('MP', 'Marco Polo'), ('TO', 'Tomoe')], max_length=15),
+            field=models.CharField(choices=[('BU', 'Bukko'), ('HO', 'Hojo'), ('KE', 'Kejsaren'), ('LA', 'Lapsang'), ('ME', 'Mentorn'), ('MP', 'MarcoP'), ('TO', 'Tomoe')], max_length=15),
         ),
         migrations.AlterField(
             model_name='comment',

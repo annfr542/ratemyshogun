@@ -8,7 +8,7 @@ class Comment(models.Model):
         ('KE', 'Kejsaren'),
         ('LA', 'Lapsang'),
         ('ME', 'Mentorn'),
-        ('MP', 'Marco Polo'),
+        ('MP', 'MarcoP'),
         ('TO', 'Tomoe'),
     )
 
@@ -42,4 +42,4 @@ class Love(models.Model):
     pub_date = models.DateTimeField('date published', default=timezone.now)
 
     def __str__(self):
-        return "%s: %s" % (self.get_character_display(), self.text)
+        return "%s: %s" % (self.get_group_display(), self.text)

@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Comment',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('character', models.CharField(choices=[('BU', 'Bukko'), ('HO', 'Hojo'), ('KE', 'Kejsaren'), ('LA', 'Lapsang'), ('ME', 'Mentorn'), ('MP', 'Marco Polo'), ('TO', 'Tomoe')], max_length=2)),
+                ('character', models.CharField(choices=[('BU', 'Bukko'), ('HO', 'Hojo'), ('KE', 'Kejsaren'), ('LA', 'Lapsang'), ('ME', 'Mentorn'), ('MP', 'MarcoP'), ('TO', 'Tomoe')], max_length=2)),
                 ('text', models.CharField(max_length=500)),
                 ('pub_date', models.DateTimeField(verbose_name='date published')),
             ],

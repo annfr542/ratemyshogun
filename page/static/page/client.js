@@ -1,3 +1,29 @@
+let dictCharacters = {
+  HO: "Hojo",
+  LA: "Lapsang",
+  MP: "MarcoP",
+  KE: "Kejsaren",
+  TO: "Tomoe",
+  BU: "Bukko",
+  ME: "Mentorn",
+
+};
+let dictGroup = {
+  DIR: "Directionen",
+  KM: "KM",
+  KSP: "KSP",
+  LED: "Ledningen",
+  MAN: "Manus",
+  PR: "PR",
+  ORK: "Orkestern",
+  MUS: "Musikgruppen",
+  SKA: "Skådis",
+  TEK: "Teknik",
+  UPP: "Uppsättningen",
+  DET: "Dekor"
+
+};
+
 
 function loadView(view=1){
   //document.getElementByClassName("active").className = "";
@@ -65,7 +91,7 @@ function loadQuizResult(result){
     case "marco":
       document.getElementById("quiz_result").innerHTML = "Marco Polo";
       document.getElementById("quiz_result_text").innerHTML = "Du är en fantastisk försäljare som vet att alla problem kan lösas med hjälp av pengar. Du har övertygat alla dina vänner om att kolla på spexet och du tycker att PR nog snart borde upprätta en staty i din ära som tack.";
-      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/Marco Polo.png' class='contester' style='width:35vw'></img>";
+      document.getElementById("quiz_result_img").innerHTML = "<img src='static/page/MarcoP.png' class='contester' style='width:35vw'></img>";
       break;
     case "directionen":
       document.getElementById("quiz_result").innerHTML = "Directionen";
@@ -84,7 +110,6 @@ function test(){
 }
 
 function update_comments() {
-
 }
 
 function update_love() {
@@ -92,12 +117,23 @@ function update_love() {
 }
 
 function post_comment(form) {
+  // temporaty add the comment 
+  let character = dictCharacters[form.character.value];
+  let text = form.text.value;
+  let img = "static/page/" +character + ".png";
+  html = '<div class="comment"><div class="comment_image"><img src=' + img + ' class="commenter"></div><div class="comment_author">'+character +'</div><div class="comment_text">'+text+'</div></div>'
+  document.getElementById("comments").innerHTML += html;
+  
+
+  //Add to database
   const url = "api/comments/";
   fetch(url, {
     method: "POST",
     body: new FormData(form)
   }).then(
+    
     function () {
+      document.getElementById("input_text").value = '';
       if (this.readyState == 4 && this.status == 200) {
         update_comments();
       }
@@ -106,12 +142,20 @@ function post_comment(form) {
 }
 
 function post_love(form) {
+  // temporaty add the comment 
+  let group = dictGroup[form.group.value];
+  let text = form.text.value;
+  let img = "static/page/" +group + ".png";
+  html = '<div class="comment"><div class="comment_image"><img src=' + img + ' class="commenter"></div><div class="comment_author">'+group +'</div><div class="comment_text">'+text+'</div></div>'
+  document.getElementById("comments").innerHTML += html;
+
   const url = "api/love/";
   fetch(url, {
     method: "POST",
     body: new FormData(form)
   }).then(
     function () {
+      document.getElementById("input_text").value = '';
       if (this.readyState == 4 && this.status == 200) {
         update_love();
       }
